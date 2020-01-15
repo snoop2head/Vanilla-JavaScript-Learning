@@ -39,7 +39,7 @@ console.log(what)
 const wat = true; // true is 1, false is 0 in binary world. Make sure it is in lower case. 
 
 // Float is number with floating number
-const wat = 55.1;
+const whaat = 55.1;
 
 
 // 1-9 Organizing Data with Arrays
@@ -47,4 +47,44 @@ const wat = 55.1;
 
 // Array is how we store data in least kind of way. 
 
-const daysOfWeek = []
+const doNotHateYourFutureSelf = 2; // start variable name with lowercase, and uppercase when space is preceding the word. 
+
+const smt = 55.1;
+
+const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri","Sat", "Sun", 54, true, "string stuff", smt];
+
+// Just like indexing python array...
+console.log(daysOfWeek[0])
+
+// 1-10 Organizing Data with Objects
+
+// As we declared arrays, to declare on object, we need to use curly brackets. Objects do not behave like arrays. 
+// So either you organize data with either array or object.
+const youngInfo = {
+  name:"young",
+  age:24,
+  gender:"male",
+  isHandsome: true,
+  countries: ['thailand', 'peru', 'korea', 'china', 'japan', 'bhutan'] , //never forget to close string
+  favFood: [
+    {
+      name:"Kimchi", //don't forget comma
+      fatty:false
+      }, 
+    {
+      name:"Burger",
+      fatty:true
+      }
+      ]
+
+}
+
+// entire information
+console.log(youngInfo)
+// accessing only gender as a key
+console.log(youngInfo.gender);
+
+// you cannot change object youngInfo, however, you can change data inside the object.
+youngInfo.gender = "female"
+console.log(youngInfo.gender)
+
