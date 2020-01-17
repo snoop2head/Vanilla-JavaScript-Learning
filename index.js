@@ -1,11 +1,12 @@
+/*
 // // 1-5 Hello World for JavaScript
 
 alert('I am working. I am JavaScript. I will work for my girlfriend too :)');
 
 console.log('I am working. I am JavaScript. I will work for my girlfriend too :)')
 
-// // 1-6 varible in JavaScript
-// // variable: not consistent or having a fixed pattern; liable to change.
+// 1-6 varible in JavaScript
+// variable: not consistent or having a fixed pattern; liable to change.
 // we need to put let in front of the initialization for variable (or creation of variable)
 let a = 221;
 let b = a - 5;
@@ -18,13 +19,11 @@ console.log(b,a)
 // just don't use var. Use either const or let. 
 
 
-/*
-Below example yields error Assignment to ...
-const a = 221;
-let b = a - 5;
-a = 4 
-console.log(b,a)
-*/
+// Below example yields error Assignment to ...
+// const a = 221;
+// let b = a - 5;
+// a = 4 
+// console.log(b,a)
 
 
 // 1-8 Data Types on JavaScript
@@ -87,4 +86,62 @@ console.log(youngInfo.gender);
 // you cannot change object youngInfo, however, you can change data inside the object.
 youngInfo.gender = "female"
 console.log(youngInfo.gender)
+
+
+// 2-1 Your first JS Function
+console.log(); // console is an object. log() is function inside of console object. 
+// a piece of code as many times as you want 
+
+
+function myamIsLovely(name,age){
+  console.log('hello!', name, "! I am", age, " years old");
+} // inside of parenthesis is parameter
+
+
+myamIsLovely("myam", 15); // inside of parenthesis is argument
+
+function sayHi(name,age){
+  return `Hello ${name} you are ${age} years old`
+}; // return a value
+
+const greetMe = sayHi("Young", 15);
+
+console.log(greetMe)
+
+const calculator = {
+  plus: function(a, b){
+    return a+b
+  },
+  minus: function(a,b){
+    return a-b
+  },
+  divide: function(a,b){
+    return a/b
+  },
+  multiply: function(a,b){
+    return a*b
+  },
+  powerOf: function(a,b){
+    return a**b
+  }
+};
+
+const powerOf = calculator.powerOf(5,5)
+console.log(powerOf) // plus is function
+
+// multiply, divide, minus, power of
+
+*/
+
+// 2-2 JS DOM Functions
+
+const title = document.getElementById("title");
+title.innerHTML = "Hi! From JS";
+
+console.log(title);
+console.dir(title);
+
+// DOM is document object module
+
+console.error("fuck");
 
