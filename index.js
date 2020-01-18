@@ -207,9 +207,11 @@ if (age >= 18 && age <= 21){
 
 // 2-6 DOM If else function practice
 
+/*
 const title = document.querySelector("#title");
 const BASE_COLOR = "rgb(52, 73, 94)";
 const OTHER_COLOR = "#7f8c8d";
+const CLICKED_CLASS = "clicked";
 
 
 function handleClick() {
@@ -242,3 +244,31 @@ function handleOnline() {
 window.addEventListener("offline",handleOffline);
 window.addEventListener("online",handleOnline);
 
+*/
+
+// 2-7 DOM If else Function part 2
+
+
+const title = document.querySelector("#title");
+const CLICKED_CLASS = "clicked";
+
+
+function handleClick() {
+  title.classList.toggle(CLICKED_CLASS);
+  /*
+  // below is exact same thing as toggle
+  const hasClass = title.classList.contains(CLICKED_CLASS);
+  // console.log(currentClass);
+  if (hasClass){
+    title.classList.remove(CLICKED_CLASS);
+  } else {
+    title.classList.add(CLICKED_CLASS);
+  }
+  */
+};
+
+function init() {
+  title.addEventListener("click",handleClick);
+};
+
+init();

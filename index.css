@@ -2,6 +2,14 @@ body{
   background-color: turquoise;
 }
 
+.btn{
+  cursor: pointer;
+}
+
 h1 {
   color: "#34495e"
+}
+
+.clicked {
+  color: #273c75
 }
