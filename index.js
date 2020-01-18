@@ -135,13 +135,110 @@ console.log(powerOf) // plus is function
 
 // 2-2 JS DOM Functions
 
-const title = document.getElementById("title");
+// const title = document.getElementById("title");
+/*
+const title = document.querySelector("#title");
 title.innerHTML = "Hi! From JS";
+title.style.color = "white"; //changing HTML with Javascript
+
 
 console.log(title);
 console.dir(title);
 
 // DOM is document object module
+console.error("darn");
+*/
 
-console.error("fuck");
+// 2-4 Events and event handlers
+// Event is anything that is happening on web. 
+
+/*
+function handleResize(event) {
+  console.log(event);
+};
+
+// window.addEventListener("resize",handleResize()); // call the function immediately, no matter what
+window.addEventListener("resize",handleResize); // call the function immediately, when event happens
+
+*/
+
+/*
+function handleClick() {
+  title.style.color = "blue";
+}
+
+title.addEventListener("click", handleClick)
+
+*/
+
+/*
+// 2-5 if, else, and, or
+if (10===5) {
+  console.log("hi");
+} else if ("10" === "10") {
+  console.log('yo');
+} else {
+  console.log("ho");
+}
+
+if (20 > 5 && "young" === "young"){ // and operator should satisfy both condition
+  console.log("yes");
+} else {
+  console.log("no");
+}
+
+if (20 > 5 || "young" === "yeong"){ // or operator should satisfy both condition
+  console.log("yes");
+} else {
+  console.log("no");
+}
+
+const age = prompt("How old are you?"); //prompt blocks all action, so don't use it other than this exercise
+console.log(age)
+
+if (age >= 18 && age <= 21){
+  console.log('drink carefully');
+} else if (age > 21){
+  console.log('you can drink')
+} else {
+  console.log('you cannot');
+}
+*/
+
+// 2-6 DOM If else function practice
+
+const title = document.querySelector("#title");
+const BASE_COLOR = "rgb(52, 73, 94)";
+const OTHER_COLOR = "#7f8c8d";
+
+
+function handleClick() {
+  const currentColor = title.style.color;
+  // console.log(currentColor)
+  if (currentColor === BASE_COLOR){
+    title.style.color = OTHER_COLOR;
+  } else {
+    title.style.color = BASE_COLOR;
+  }
+};
+
+function init() {
+  title.style.color = BASE_COLOR;
+  title.addEventListener("click", handleClick)
+  // title.addEventListener("mouseenter", handleClick)
+  // Refer to events at MDN 
+}
+init();
+
+function handleOffline() {
+  console.log("you got offline");
+}
+
+function handleOnline() {
+  console.log("welcome back!");
+}
+
+
+window.addEventListener("offline",handleOffline);
+window.addEventListener("online",handleOnline);
 
