@@ -150,7 +150,7 @@ console.error("darn");
 */
 
 // 2-4 Events and event handlers
-// Event is anything that is happening on web. 
+// Event is anything that is happening on web.
 
 /*
 function handleResize(event) {
@@ -248,10 +248,8 @@ window.addEventListener("online",handleOnline);
 
 // 2-7 DOM If else Function part 2
 
-
 const title = document.querySelector("#title");
 const CLICKED_CLASS = "clicked";
-
 
 function handleClick() {
   title.classList.toggle(CLICKED_CLASS);
@@ -265,10 +263,12 @@ function handleClick() {
     title.classList.add(CLICKED_CLASS);
   }
   */
-};
+}
 
 function init() {
-  title.addEventListener("click",handleClick);
-};
+  title.addEventListener("click", handleClick);
+}
 
 init();
+
+
