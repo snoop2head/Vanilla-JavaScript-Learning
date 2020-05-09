@@ -1,4 +1,5 @@
 // selecting class in html document
+// refer to ./index.html for variable designation for html element
 const clockContainer = document.querySelector(".js-clock"),
   clockTitle = clockContainer.querySelector("h1");
 

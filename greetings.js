@@ -1,9 +1,10 @@
 // https://www.youtube.com/watch?v=lXxlGCRBOQU&list=PL7jH19IHhOLM8YwJMTa3UkXZN-LldYnyK&index=24
 
 // selecting tag elements in html document, designating them as variables
+// refer to ./index.html for variable designation for html element
 const form = document.querySelector(".js-form"), // <form class = "js-form">
-  input = form.querySelector("input"), // <form> <input> tag element </input> </form
-  greetings = document.querySelector(".js-greetings"); // <h4 class="js-greetings">
+  input = form.querySelector("input"); // <form> <input> tag element </input> </form
+const greetings = document.querySelector(".js-greetings"); // <h4 class="js-greetings">
 
 // designating default values for local storage
 const USER = "currentUser",
