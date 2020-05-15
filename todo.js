@@ -61,14 +61,27 @@ function loadToDos() {
   }
 }
 
+// deleting todos on click button
 function deleteToDo(event) {
+  // logging which button is clicked
+  // console.dir(event)
+  // console.dir(event.target)
+  // console.log(event.target.parentNode);
+
   const btn = event.target;
   const li = btn.parentNode;
+  // removing element: https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
   toDoList.removeChild(li);
-  const cleanToDos = toDos.filter(function (toDo) {
+  // filter() goes through every items in array -> make new array with items that returns true
+  const filterToDos = toDos.filter(function (toDo) {
+    // id of item that does not match to id of list item that is just clicked
+    // parseInt turns str -> int
+    // console.log(li.id);
     return toDo.id !== parseInt(li.id);
   });
-  toDos = cleanToDos;
+  // console.log(filterToDos);
+  // overwrite toDos as filtered to dos
+  toDos = filterToDos;
   saveToDos();
 }
 
